@@ -5,9 +5,25 @@
     <title>Redesigned Siskom UNJ</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1578fe4124.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        .dropdown {
+                @apply relative inline-block;
+            }
+            .dropbtn {
+                @apply cursor-pointer bg-transparent border-none p-0 m-0;
+            }
+            .dropdown-content {
+                @apply absolute z-10 w-fit whitespace-nowrap bg-white shadow-lg rounded-md mt-2 opacity-0 invisible transition-opacity transition-all duration-300;
+            }
+            .dropdown-content li {
+                @apply px-4 py-2 block cursor-pointer hover:bg-gray-200;
+            }
+            .dropdown:hover .dropdown-content {
+                @apply opacity-100 visible;
+            }
+        </style>
 </head>
 
 <body>
@@ -41,14 +57,13 @@
                         <li class="dropdown">
                             <button class="dropbtn">Akademik <i class="fa-solid fa-chevron-down fa-xs"></i></button>
                             <ul class="dropdown-content text-lg">
-                                <li>Visi, Misi, & Tujuan</li>
-                                <li>Akreditasi</li>
-                                <li>Profil Lulusan</li>
-                                <li>Kompetensi Lulusan</li>
-                                <li>Struktur Organisasi</li>
-                                <li>Tenaga Kependidikan</li>
-                                <li>Data Kerjasama P2M</li>
-                                <li>Dana Pengembangan Prodi</li>
+                                <li>Kurikulum</li>
+                                <li>Jadwal Perkuliahan</li>
+                                <li>Kalender Akademik</li>
+                                <li>Penjaminan Mutu</li>
+                                <li>Informasi Beasiswa</li>
+                                <li>Sistem Informasi Akademik (SIAKAD)</li>
+                                <li>Learning Management System (LMS)</li>
                             </ul>
                         </li>
                         <li class="dropdown">
