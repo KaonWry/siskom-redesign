@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Redesign Siskom UNJ</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        
+        /* 1. PERBAIKAN HEADER (RAPI & AMAN) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .logo {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .logo span {
+            /* Ini mensimulasikan ikon gembok aman (Heuristic #1) */
+            color: green;
+            margin-right: 5px;
+        }
+
+        header nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 2. KONTEN UTAMA & GRID BERITA (RATA & RAPI) */
+        main {
+            padding: 30px;
+        }
+
+        .berita-container {
+            /* Ini adalah perbaikan untuk Heuristic #8 (Aesthetic Design) */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 kolom rata */
+            gap: 25px; /* Jarak antar kartu */
+        }
+
+        .berita-card {
+            border: 2px solid #ccc;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .berita-card .placeholder-img {
+            height: 150px;
+            background-color: #eee;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+        }
+
+        /* 3. PERBAIKAN TOMBOL PAGINASI (JELAS) */
+        .pagination {
+            /* Ini perbaikan untuk Heuristic #4 (Consistency) */
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .pagination a {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #333;
+            margin: 0 3px;
+            background-color: #fff;
+        }
+
+        .pagination a.active {
+            background-color: #ddd;
+            font-weight: bold;
+        }
+        
+        /* 4. PERBAIKAN FOOTER (LENGKAP DENGAN KONTAK) */
+        footer {
+            /* Ini perbaikan untuk Heuristic #6 (Recognition) */
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        footer h3 {
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        footer li {
+            margin-bottom: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span>🔒</span> Siskom UNJ (Aman)
+        </div>
+        <nav>
+            <a href="#">Profil</a>
+            <a href="#">Akademik</a>
+            <a href="#">Riset</a>
+            <a href="#">Berita</a>
+            <a href="#">Kontak Kami</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Berita Terkini</h2>
+        
+        <section class="berita-container">
+            
+            <article class="berita-card">
+                <div class="placeholder-img">(Placeholder Gambar)</div>
+                <h3>Judul Berita Pertama (Misal: Gemastik)</h3>
+                <p>Ringkasan singkat berita... Semua kartu berita ini akan memiliki tinggi yang seragam karena berada di dalam grid.</p>
+            </article>
+            
+            <article class="berita-card">
+                <div class="placeholder-img">(Placeholder Gambar)</div>
+                <h3>Judul Berita Kedua</h3>
+                [cite_start]<p>Ringkasan singkat berita... Desain yang konsisten membuat situs terlihat profesional[cite: 116].</p>
+            </article>
+            
+            <article class="berita-card">
+                <div class="placeholder-img">(Placeholder Gambar)</div>
+                <h3>Judul Berita Ketiga</h3>
+                [cite_start]<p>Ringkasan singkat berita... Menghilangkan elemen rusak seperti carousel dots[cite: 118].</p>
+            </article>
+
+        </section>
+
+        <nav class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Tentang Siskom UNJ</h3>
+                <p>Program Studi Sistem Komputer, Fakultas MIPA, Universitas Negeri Jakarta.</p>
+            </div>
+            
+            <div>
+                <h3>Kontak Kami</h3>
+                <ul>
+                    <li><strong>Email:</strong> siskom@unj.ac.id</li>
+                    <li><strong>Telepon:</strong> (021) 123-4567</li>
+                    <li><strong>Alamat:</strong> Gedung X, Kampus A UNJ, Jl. Rawamangun Muka</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
