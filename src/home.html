@@ -9,72 +9,79 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         .dropdown {
-                @apply relative inline-block;
-            }
-            .dropbtn {
-                @apply cursor-pointer bg-transparent border-none p-0 m-0;
-            }
-            .dropdown-content {
-                @apply absolute z-10 w-fit whitespace-nowrap bg-white shadow-lg rounded-md mt-2 opacity-0 invisible transition-opacity transition-all duration-300;
-            }
-            .dropdown-content li {
-                @apply px-4 py-2 block cursor-pointer hover:bg-gray-200;
-            }
-            .dropdown:hover .dropdown-content {
-                @apply opacity-100 visible;
-            }
+                    @apply relative inline-block;
+                }
+                .dropbtn {
+                    @apply cursor-pointer bg-transparent border-none p-0 m-0;
+                }
+                 .dropdown-content {
+                    @apply absolute z-10 w-fit whitespace-nowrap bg-white shadow-lg rounded-md mt-2 transition-opacity transition-all duration-300;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition-property: opacity, visibility;
+                    transition-duration: 300ms, 300ms;
+                    transition-delay: 0ms, 300ms;
+                }
+                .dropdown-content li a {
+                    @apply px-4 py-2 block cursor-pointer hover:bg-gray-200;
+                }
+                .dropdown:hover .dropdown-content {
+                    opacity: 1;
+                    visibility: visible;
+                    transition-delay: 0ms, 0ms;
+                }
         </style>
 </head>
 
 <body>
     <header>
         <nav class="flex flex-row items-center">
-            <section class="ml-0 mr-auto p-10 flex flex-row items-center gap-6">
+            <div class="ml-0 mr-auto p-10 flex flex-row  items-center gap-6">
                 <img src="img/unj_logo.png" class="h-[120px]">
                 <div class="flex flex-col">
                     <h2 class="text-2xl">Program Studi</h2>
-                    <h1 class="text-4xl font-bold">Ilmu Komputer</h1>
+                    <h1 class="text-4xl font-bold whitespace-nowrap">Ilmu Komputer</h1>
                 </div>
-            </section>
+            </div>
             <section class="ml-auto mr-0 p-10">
                 <div class="flex flex-row items-center gap-8">
                     <input type="text" placeholder="Cari..."
                         class="px-4 py-2 rounded border border-gray-300 text-lg w-[400px]" />
-                    <ul class="flex flex-row gap-8 text-2xl">
+                    <ul class="flex flex-row gap-8 text-xl">
                         <li class="dropdown">
-                            <button class="dropbtn">Profil <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+                            <button class="dropbtn whitespace-nowrap">Profil <i class="fa-solid fa-chevron-down fa-xs"></i></button>
                             <ul class="dropdown-content text-lg">
-                                <li>Visi, Misi, & Tujuan</li>
-                                <li>Akreditasi</li>
-                                <li>Profil Lulusan</li>
-                                <li>Kompetensi Lulusan</li>
-                                <li>Struktur Organisasi</li>
-                                <li>Tenaga Kependidikan</li>
-                                <li>Data Kerjasama P2M</li>
-                                <li>Dana Pengembangan Prodi</li>
+                                <li><a href="#">Visi, Misi, & Tujuan</a></li>
+                                <li><a href="#">Akreditasi</a></li>
+                                <li><a href="#">Profil Lulusan</a></li>
+                                <li><a href="#">Kompetensi Lulusan</a></li>
+                                <li><a href="#">Struktur Organisasi</a></li>
+                                <li><a href="#">Tenaga Kependidikan</a></li>
+                                <li><a href="#">Data Kerjasama P2M</a></li>
+                                <li><a href="#">Dana Pengembangan Prodi</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <button class="dropbtn">Akademik <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+                            <button class="dropbtn whitespace-nowrap">Akademik <i class="fa-solid fa-chevron-down fa-xs"></i></button>
                             <ul class="dropdown-content text-lg">
-                                <li>Kurikulum</li>
-                                <li>Jadwal Perkuliahan</li>
-                                <li>Kalender Akademik</li>
-                                <li>Penjaminan Mutu</li>
-                                <li>Informasi Beasiswa</li>
-                                <li>Sistem Informasi Akademik (SIAKAD)</li>
-                                <li>Learning Management System (LMS)</li>
+                                <li><a href="#">Kurikulum</a></li>
+                                <li><a href="#">Jadwal Perkuliahan</a></li>
+                                <li><a href="#">Kalender Akademik</a></li>
+                                <li><a href="#">Penjaminan Mutu</a></li>
+                                <li><a href="#">Informasi Beasiswa</a></li>
+                                <li><a href="https://siakad.unj.ac.id/home">Sistem Informasi Akademik (SIAKAD)</a></li>
+                                <li><a href="https://onlinelearning.unj.ac.id/my/">Learning Management System (LMS)</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <button class="dropbtn">Riset <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+                            <button class="dropbtn whitespace-nowrap">Riset <i class="fa-solid fa-chevron-down fa-xs"></i></button>
                         </li>
                         <li class="dropdown">
-                            <button class="dropbtn">Kemahasiswaan <i
+                            <button class="dropbtn whitespace-nowrap">Kemahasiswaan <i
                                     class="fa-solid fa-chevron-down fa-xs"></i></button>
                         </li>
                         <li class="dropdown">
-                            <button class="dropbtn">Informasi <i class="fa-solid fa-chevron-down fa-xs"></i></button>
+                            <button class="dropbtn whitespace-nowrap">Informasi <i class="fa-solid fa-chevron-down fa-xs"></i></button>
                         </li>
                     </ul>
                 </div>
